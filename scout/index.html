@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Scout Platform Preview</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#1A1A2E;color:#fff;font-family:system-ui,sans-serif}.h{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px}.h h1{font-size:clamp(28px,5vw,48px);margin-bottom:12px}.h p{color:#AAC;font-size:18px;margin-bottom:24px}.d{width:200px;height:3px;background:#E8513D;margin:0 auto 24px}.s{max-width:900px;margin:0 auto;padding:40px 20px 60px}.s h2{font-size:22px;margin-bottom:16px;color:#E8513D}.s img{width:100%;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.5)}.c{text-align:center;padding:60px 20px 100px}.c h2{font-size:clamp(24px,4vw,40px);margin-bottom:32px}.b{display:inline-block;background:#E8513D;color:#fff;text-decoration:none;padding:16px 40px;border-radius:10px;font-size:18px;font-weight:700}</style></head><body><section class="h"><h1>Scout Platform Preview</h1><p>AI-Powered Lead Intelligence for Real Estate</p><div class="d"></div></section><section class="s"><h2>1. Welcome to Scout</h2><img src="PLACEHOLDER_0" alt="Welcome to Scout"></section><section class="s"><h2>2. Divorce Lead Channels</h2><img src="PLACEHOLDER_1" alt="Divorce Lead Channels"></section><section class="s"><h2>3. Norfolk Lead Data</h2><img src="PLACEHOLDER_2" alt="Norfolk Lead Data"></section><section class="s"><h2>4. Property Detail</h2><img src="PLACEHOLDER_3" alt="Property Detail"></section><section class="c"><h2>Ready to See It Live?</h2><a class="b" href="https://calendly.com/dr-coastalelements/scout-exclusive-divorce-leads" target="_blank">Schedule a Demo</a></section>
+<script>
+(async function(){
+  const imgs = document.querySelectorAll('img');
+  for(let i=0; i<imgs.length; i++){
+    const src = imgs[i].getAttribute('src');
+    if(src && src.startsWith('PLACEHOLDER_')){
+      const idx = src.split('_')[1];
+      try{
+        const r = await fetch('img'+idx+'.b64');
+        const b64 = await r.text();
+        imgs[i].src = 'data:image/jpeg;base64,' + b64;
+      }catch(e){console.error(e)}
+    }
+  }
+})();
+</script>
+</body></html>
